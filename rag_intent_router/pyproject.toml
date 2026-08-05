@@ -20,4 +20,4 @@ dependencies = [
 package-data = { "rag_intent_router" = ["models/*.joblib"] }
 
 [project.urls]
-Homepage = "https://github.com/<your-username>/rag-intent-router"
+Homepage = "https://github.com/yuvarajd2588/rag-intent-router"
