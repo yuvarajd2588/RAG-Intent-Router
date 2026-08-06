@@ -1,6 +1,6 @@
-# rag-intent-classifier
+# rag_intent_classifier
 
-A lightweight, production-ready **intent classifier** built using MiniLM embeddings and classical ML models.
+A lightweight, production-ready, ML offline **intent classifier** built using MiniLM embeddings and classical ML models.
 
 ## Why this package exists
 
@@ -10,9 +10,15 @@ Most RAG architecture diagrams completely miss one critical component:
 
 This package provides:
 
-- 150 original CLINC intents  
-- **+ 1 new critical intent: `follow_up`**  
-- Total: **151 intents**
+- 150 original CLINC150 intents  
+- **+ 6 new meta-intents critical for RAG systems:**
+  - follow_up  
+  - connect_to_human  
+  - escalate_issue  
+  - negative_sentiment  
+  - urgent_attention_required  
+  - general_customer_support  
+- **Total: 156 intents**
 
 Follow-up queries like:
 
@@ -39,6 +45,11 @@ This classifier solves that missing piece.
   - KNN
 - Human-readable intent labels  
 - Follow-up intent classification  
+- Negative sentiment detection  
+- Escalation intent detection  
+- Urgent attention detection  
+- Connect-to-human routing  
+- General customer support intent detection  
 - Zero external downloads required  
 - Fully offline inference  
 - pip-installable  
@@ -48,4 +59,4 @@ This classifier solves that missing piece.
 ## Installation
 
 ```bash
-pip install rag-intent-classifier
+pip install rag_intent_classifier

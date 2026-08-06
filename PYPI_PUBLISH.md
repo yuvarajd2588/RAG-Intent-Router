@@ -51,7 +51,7 @@ You will be prompted for your TestPyPI credentials.
 ## 7. Install from TestPyPI to verify
 
 ```bash
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ rag-intent-classifier
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ rag_intent_classifier
 ```
 
 ## 8. Upload to PyPI
@@ -63,7 +63,7 @@ twine upload dist/*
 ## 9. Verify the published package
 
 ```bash
-pip install --upgrade rag-intent-classifier
+pip install --upgrade rag_intent_classifier
 ```
 
 ## Notes

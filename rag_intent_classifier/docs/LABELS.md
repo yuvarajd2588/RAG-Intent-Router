@@ -6,7 +6,7 @@
 ```markdown
 # Human-Readable Intent Labels
 
-This package supports **151 intents**:
+This package supports **156 intents**:
 
 - 150 original CLINC150 intents  
 - 1 new intent: `follow_up`

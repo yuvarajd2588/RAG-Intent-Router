@@ -47,5 +47,5 @@ infer_intent("How do I renew my policy?")
 ## CLI usage
 
 ```bash
-rag-intent-classifier "How do I renew my policy?"
+rag_intent_classifier "How do I renew my policy?"
 ```
