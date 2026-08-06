@@ -40,30 +40,24 @@ This creates both:
 python -m twine check dist/*
 ```
 
-## 6. Upload to TestPyPI (recommended first)
-
-```bash
-twine upload --repository testpypi dist/*
-```
-
-You will be prompted for your TestPyPI credentials.
-
-## 7. Install from TestPyPI to verify
-
-```bash
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ rag_intent_classifier
-```
-
-## 8. Upload to PyPI
+## 6. Upload to PyPI (production)
 
 ```bash
 twine upload dist/*
 ```
 
-## 9. Verify the published package
+You will be prompted for your PyPI credentials.
+
+If you prefer to provide them explicitly in the command line:
 
 ```bash
-pip install --upgrade rag_intent_classifier
+twine upload --repository pypi dist/*
+```
+
+## 7. Verify the published package
+
+```bash
+pip install --upgrade rag-intent-classifier
 ```
 
 ## Notes

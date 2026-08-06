@@ -1,9 +1,26 @@
 import argparse
 import os
+import warnings
+
 import joblib
 
+warnings.filterwarnings("ignore", message=r"`resume_download` is deprecated.*", category=FutureWarning)
+
+from sentence_transformers import SentenceTransformer
+
 PACKAGE_DIR = os.path.dirname(__file__)
-MODEL_DIR = os.path.join(PACKAGE_DIR, "models")
+PACKAGE_MODEL_DIR = os.path.join(PACKAGE_DIR, "models")
+CACHE_MODEL_DIR = os.path.join(os.path.expanduser("~"), ".cache", "rag_intent_classifier", "models")
+
+
+def _get_model_dir():
+    if os.path.isdir(PACKAGE_MODEL_DIR):
+        return PACKAGE_MODEL_DIR
+    os.makedirs(CACHE_MODEL_DIR, exist_ok=True)
+    return CACHE_MODEL_DIR
+
+
+MODEL_DIR = _get_model_dir()
 
 _encoder = None
 _label_map = None
@@ -72,13 +89,28 @@ def _patch_tokenizer_compatibility(encoder):
                         setattr(config_obj, attr_name, False if attr_name in {"output_attentions", "output_hidden_states"} else True)
 
 
+def _load_encoder():
+    encoder_path = os.path.join(MODEL_DIR, "minilm_encoder.joblib")
+    if os.path.exists(encoder_path):
+        encoder = joblib.load(encoder_path)
+    else:
+        encoder = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+
+    _patch_tokenizer_compatibility(encoder)
+    return encoder
+
+
 def _load_assets():
     global _encoder, _label_map
     if _encoder is None or _label_map is None:
         _patch_transformer_model_compatibility()
-        _encoder = joblib.load(os.path.join(MODEL_DIR, "minilm_encoder.joblib"))
-        _patch_tokenizer_compatibility(_encoder)
-        _label_map = joblib.load(os.path.join(MODEL_DIR, "label_map.joblib"))
+        _encoder = _load_encoder()
+
+        label_map_path = os.path.join(MODEL_DIR, "label_map.joblib")
+        if os.path.exists(label_map_path):
+            _label_map = joblib.load(label_map_path)
+        else:
+            raise RuntimeError("Label map is not available. Reinstall the package with the bundled model assets or train them locally.")
     return _encoder, _label_map
 
 
@@ -114,9 +146,7 @@ def infer_intent(text, model="LogisticRegression"):
     encoder, label_map = _load_assets()
     model_path = os.path.join(MODEL_DIR, f"{model}.joblib")
     if not os.path.exists(model_path):
-        raise ValueError(
-            f"Model '{model}' not found. Available models: {list_available_models()}"
-        )
+        raise RuntimeError(f"Model '{model}' is not available in {MODEL_DIR}")
 
     clf = joblib.load(model_path)
 
@@ -133,7 +163,9 @@ def infer_intent(text, model="LogisticRegression"):
 
 
 def list_available_models():
-    excluded = {"label_map", "minilm_encoder"}
+    excluded = {"label_map", "minilm_encoder", "KNN"}
+    if not os.path.isdir(MODEL_DIR):
+        return []
     return [
         f.replace(".joblib", "")
         for f in os.listdir(MODEL_DIR)

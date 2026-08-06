@@ -42,7 +42,6 @@ This classifier solves that missing piece.
   - PassiveAggressive
   - SGDClassifier
   - RidgeClassifier
-  - KNN
 - Human-readable intent labels  
 - Follow-up intent classification  
 - Negative sentiment detection  

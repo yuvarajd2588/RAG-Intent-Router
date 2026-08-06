@@ -57,12 +57,3 @@ git clone https://github.com/yuvarajd2588/rag_intent_classifier.git
 cd rag_intent_classifier
 pip install -e .
 ```
-
-## Packaging and publish
-
-For a clean release workflow, see [PYPI_PUBLISH.md](PYPI_PUBLISH.md).
-
-```bash
-python -m build
-python -m twine check dist/*
-```
