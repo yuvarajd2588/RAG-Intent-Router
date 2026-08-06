@@ -1,61 +1,59 @@
 # rag_intent_classifier
 
-A lightweight, production-ready, ML offline **intent classifier** built using MiniLM embeddings and classical ML models.
+A lightweight, production-ready, offline intent classifier for RAG systems. It sits before retrieval and routes user queries into the right workflow early.
 
-## Why this package exists
+## Why this package matters
 
-Most RAG architecture diagrams completely miss one critical component:
+Most RAG systems treat retrieval as the main decision point, but intent classification is often the missing first step. This package adds a reliable layer that detects meta-intents such as:
 
-### **Intent Classification — especially Follow-Up Intent Detection**
+- follow_up
+- connect_to_human
+- escalate_issue
+- negative_sentiment
+- urgent_attention_required
+- general_customer_support
 
-This package provides:
+These labels help reduce irrelevant retrieval and improve routing quality in support, customer-service, and knowledge-base applications.
 
-- 150 original CLINC150 intents  
-- **+ 6 new meta-intents critical for RAG systems:**
-  - follow_up  
-  - connect_to_human  
-  - escalate_issue  
-  - negative_sentiment  
-  - urgent_attention_required  
-  - general_customer_support  
-- **Total: 156 intents**
+## What the package provides
 
-Follow-up queries like:
-
-- "I'm not satisfied with your last answer"
-- "Give me the last answer in 3 bullet points"
-- "Can you clarify your previous response?"
-
-are **not domain intents** — they are **meta-intents** that must be routed differently in RAG systems.
-
-This classifier solves that missing piece.
-
----
-
-## Features
-
-- MiniLM-L6-v2 embeddings  
-- Multiple classifier models packaged:
-  - LogisticRegression (default)
-  - GaussianNB
-  - LinearSVC
-  - PassiveAggressive
-  - SGDClassifier
-  - RidgeClassifier
-- Human-readable intent labels  
-- Follow-up intent classification  
-- Negative sentiment detection  
-- Escalation intent detection  
-- Urgent attention detection  
-- Connect-to-human routing  
-- General customer support intent detection  
-- Zero external downloads required  
-- Fully offline inference  
-- pip-installable  
-
----
+- 156 intents total (150 CLINC + 6 additional meta-intents)
+- MiniLM-based embeddings
+- Multiple packaged classical ML classifiers
+- Human-readable labels for downstream logic
+- Fully offline inference
+- Simple Python API and CLI
 
 ## Installation
 
+Python 3.9 to 3.12 is the currently supported range.
+
 ```bash
 pip install rag_intent_classifier
+```
+
+## Quick usage
+
+```python
+from rag_intent_classifier import infer_intent
+
+print(infer_intent("How do I renew my policy?"))
+```
+
+## RAG placement
+
+```mermaid
+flowchart TD
+    A[👤 User query] --> B[🧠 Intent classifier]
+    B --> C{Intent type}
+    C -->|Meta-intent| D[🧭 Route to appropriate workflow]
+    C -->|Domain intent| E[🔎 Retrieval stage]
+    D --> F[⚡ Faster, more focused search]
+    E --> G[🗂️ Vector DB + BM25]
+    F --> H[⚖️ RRF fusion]
+    G --> H
+    H --> I[🎯 Optional cross-encoder rerank]
+    I --> J[🤖 LLM answer generation]
+```
+
+This helps shrink the search space and route the request to the right handling path before the main retrieval step.

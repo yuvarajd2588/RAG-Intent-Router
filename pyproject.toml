@@ -4,22 +4,22 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rag_intent_classifier"
-version = "1.0.1"
+version = "1.0.4"
 description = "MiniLM-based intent classifier with 156 intents, including follow-up, negative sentiment, escalate intents detection for RAG systems."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.9,<3.13"
 authors = [
   { name = "Yuvaraj Dasarathan" }
 ]
 
 dependencies = [
-  "numpy==1.26.4",
-  "pandas==2.2.2",
-  "scikit-learn==1.5.0",
-  "joblib==1.4.2",
-  "sentence-transformers==2.6.0",
-  "transformers==4.41.2",
-  "torch==2.2.2"
+  "numpy>=1.26.4,<3.0",
+  "pandas>=2.2.2,<3.0",
+  "scikit-learn>=1.5.0,<2.0",
+  "joblib>=1.4.2,<2.0",
+  "sentence-transformers>=2.6.0,<3.0; python_version<'3.13'",
+  "transformers>=4.41.2,<5.0; python_version<'3.13'",
+  "torch>=2.2.2,<3.0; python_version<'3.13'"
 ]
 
 [project.scripts]
