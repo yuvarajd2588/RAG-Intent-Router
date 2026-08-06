@@ -9,3 +9,9 @@ def test_package_import_and_inference():
     assert len(prediction) == 1
     assert isinstance(prediction[0], str)
     assert prediction[0]
+
+
+def test_new_custom_labels_are_returned_as_names():
+    prediction = infer_intent("connect me to a human")
+    assert len(prediction) == 1
+    assert prediction[0] == "connect_to_human"

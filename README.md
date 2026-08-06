@@ -49,7 +49,9 @@ cd rag-intent-classifier
 pip install -e .
 ```
 
-## Packaging check
+## Packaging and publish
+
+For a clean release workflow, see [PYPI_PUBLISH.md](PYPI_PUBLISH.md).
 
 ```bash
 python -m build

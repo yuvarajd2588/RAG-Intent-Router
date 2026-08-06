@@ -82,6 +82,29 @@ def _load_assets():
     return _encoder, _label_map
 
 
+def _resolve_label_name(prediction, label_map):
+    if label_map is None:
+        return str(prediction)
+
+    prediction_str = str(prediction)
+
+    if prediction_str in label_map:
+        mapped_value = label_map[prediction_str]
+        if isinstance(mapped_value, str):
+            if mapped_value.isdigit() or (mapped_value.startswith("-") and mapped_value[1:].isdigit()):
+                return prediction_str
+            return mapped_value
+        return str(mapped_value)
+
+    for key, value in label_map.items():
+        if str(key) == prediction_str:
+            return str(key)
+        if str(value) == prediction_str:
+            return str(key)
+
+    return prediction_str
+
+
 def infer_intent(text, model="LogisticRegression"):
     """
     Predict intent using the specified model.
@@ -104,7 +127,7 @@ def infer_intent(text, model="LogisticRegression"):
 
     embeddings = encoder.encode(texts, show_progress_bar=False)
     numeric_preds = clf.predict(embeddings)
-    human_preds = [label_map[p] for p in numeric_preds]
+    human_preds = [_resolve_label_name(prediction, label_map) for prediction in numeric_preds]
 
     return human_preds
 
