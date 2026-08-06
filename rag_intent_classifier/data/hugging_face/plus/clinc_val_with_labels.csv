@@ -3099,3 +3099,52 @@ what site publishes the most fake news,42,oos
 can you tell me some fake news,42,oos
 is cnn really fake news,42,oos
 why is there fake news,42,oos
+can you rewrite your last answer more clearly,200,follow_up
+your previous answer needs more explanation,200,follow_up
+can you simplify your last explanation,200,follow_up
+can you expand your last explanation,200,follow_up
+can you clarify your last explanation,200,follow_up
+can you summarize your previous explanation,200,follow_up
+can you shorten your previous explanation,200,follow_up
+can you lengthen your previous explanation,200,follow_up
+can you refine your previous explanation,200,follow_up
+can you fix your previous explanation,200,follow_up
+can you update your previous explanation,200,follow_up
+can you revisit your previous explanation,200,follow_up
+can you rethink your previous explanation,200,follow_up
+can you reconsider your previous explanation,200,follow_up
+can you check your previous explanation again,200,follow_up
+can you verify your previous explanation,200,follow_up
+can you double-check your previous explanation,200,follow_up
+can you add more context to your previous explanation,200,follow_up
+can you add more examples to your previous explanation,200,follow_up
+can you add more steps to your previous explanation,200,follow_up
+can you add more reasoning to your previous explanation,200,follow_up
+can you add more justification to your previous explanation,200,follow_up
+can you add more elaboration to your previous explanation,200,follow_up
+can you add more insight to your previous explanation,200,follow_up
+can you add more nuance to your previous explanation,200,follow_up
+can you add more precision to your previous explanation,200,follow_up
+can you add more depth to your previous explanation,200,follow_up
+can you add more simplicity to your previous explanation,200,follow_up
+can you add more complexity to your previous explanation,200,follow_up
+can you add more structure to your previous explanation,200,follow_up
+can you add more organization to your previous explanation,200,follow_up
+can you add more formatting to your previous explanation,200,follow_up
+can you add more polish to your previous explanation,200,follow_up
+can you add more refinement to your previous explanation,200,follow_up
+can you continue your previous explanation with more detail,200,follow_up
+can you continue your previous explanation with more clarity,200,follow_up
+can you continue your previous explanation with more examples,200,follow_up
+can you continue your previous explanation with more steps,200,follow_up
+can you continue your previous explanation with more reasoning,200,follow_up
+can you continue your previous explanation with more justification,200,follow_up
+can you continue your previous explanation with more elaboration,200,follow_up
+can you continue your previous explanation with more insight,200,follow_up
+can you continue your previous explanation with more nuance,200,follow_up
+can you continue your previous explanation with more precision,200,follow_up
+can you continue your previous explanation with more depth,200,follow_up
+can you continue your previous explanation with more simplicity,200,follow_up
+can you continue your previous explanation with more complexity,200,follow_up
+can you continue your previous explanation with more structure,200,follow_up
+can you continue your previous explanation with more organization,200,follow_up

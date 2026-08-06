@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-intent-classifier"
+version = "1.0.1"
+description = "MiniLM-based intent classifier with 151 intents, including follow-up intent detection for RAG systems."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  { name = "Yuvaraj" }
+]
+
+dependencies = [
+  "numpy==1.26.4",
+  "pandas==2.2.2",
+  "scikit-learn==1.5.0",
+  "joblib==1.4.2",
+  "sentence-transformers==2.6.0",
+  "transformers==4.41.2",
+  "torch==2.2.2"
+]
+
+[project.scripts]
+rag-intent-classifier = "rag_intent_classifier.infer:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["rag_intent_classifier*"]
+
+[tool.setuptools.package-data]
+rag_intent_classifier = [
+    "models/*.joblib",
+    "docs/*.md"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[project.urls]
+Homepage = "https://github.com/yuvarajd2588/rag-intent-classifier"

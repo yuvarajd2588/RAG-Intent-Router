@@ -5499,3 +5499,52 @@ can you give me the gps location of harvey,42,oos
 where's my buddy steve right this second,42,oos
 locate jenny at her present position,42,oos
 let me know where jim is right now,42,oos
+please rewrite your last answer,200,follow_up
+your last answer needs improvement,200,follow_up
+can you clarify your last answer,200,follow_up
+can you expand your last answer,200,follow_up
+can you simplify your last answer,200,follow_up
+can you summarize your last answer,200,follow_up
+can you shorten your last answer,200,follow_up
+can you lengthen your last answer,200,follow_up
+can you refine your last answer,200,follow_up
+can you fix your last answer,200,follow_up
+can you update your last answer,200,follow_up
+can you revisit your last answer,200,follow_up
+can you rethink your last answer,200,follow_up
+can you reconsider your last answer,200,follow_up
+can you check your last answer again,200,follow_up
+can you verify your last answer,200,follow_up
+can you double-check your last answer,200,follow_up
+can you add more context to your last answer,200,follow_up
+can you add more examples to your last answer,200,follow_up
+can you add more steps to your last answer,200,follow_up
+can you add more reasoning to your last answer,200,follow_up
+can you add more justification to your last answer,200,follow_up
+can you add more elaboration to your last answer,200,follow_up
+can you add more insight to your last answer,200,follow_up
+can you add more nuance to your last answer,200,follow_up
+can you add more precision to your last answer,200,follow_up
+can you add more depth to your last answer,200,follow_up
+can you add more simplicity to your last answer,200,follow_up
+can you add more complexity to your last answer,200,follow_up
+can you add more structure to your last answer,200,follow_up
+can you add more organization to your last answer,200,follow_up
+can you add more formatting to your last answer,200,follow_up
+can you add more polish to your last answer,200,follow_up
+can you add more refinement to your last answer,200,follow_up
+can you continue your last answer with more detail,200,follow_up
+can you continue your last answer with more clarity,200,follow_up
+can you continue your last answer with more examples,200,follow_up
+can you continue your last answer with more steps,200,follow_up
+can you continue your last answer with more reasoning,200,follow_up
+can you continue your last answer with more justification,200,follow_up
+can you continue your last answer with more elaboration,200,follow_up
+can you continue your last answer with more insight,200,follow_up
+can you continue your last answer with more nuance,200,follow_up
+can you continue your last answer with more precision,200,follow_up
+can you continue your last answer with more depth,200,follow_up
+can you continue your last answer with more simplicity,200,follow_up
+can you continue your last answer with more complexity,200,follow_up
+can you continue your last answer with more structure,200,follow_up
+can you continue your last answer with more organization,200,follow_up
