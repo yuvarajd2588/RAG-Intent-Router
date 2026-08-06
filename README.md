@@ -42,63 +42,8 @@ These are especially useful for routing to a human, skipping standard retrieval,
 
 The package acts as the first decision layer in a RAG system.
 
-### Diagram option 1
-![RAG architecture](Final-RAG-Intent-classifier-dark.png)
-
-```mermaid
-graph TD
-    A["👤 User query"] --> B["🧠 Intent classifier"]
-    B --> C{"Intent type"}
-    C -->|follow_up| D["🧭 Clarify or continue context"]
-    C -->|connect_to_human| E["👨‍💼 Hand off to human"]
-    C -->|escalate_issue| F["🚨 Escalate issue"]
-    C -->|negative_sentiment| G["😟 Sentiment-aware handling"]
-    C -->|urgent_attention_required| H["⚡ Fast-track support"]
-    C -->|general_customer_support| I["🛠️ Support workflow"]
-    C -->|other intents| J["🔎 Retrieval pipeline"]
-    J --> K["🗂️ Vector DB search"]
-    J --> L["🔍 BM25 search"]
-    K --> M["⚖️ RRF fusion"]
-    L --> M
-    M --> N["🎯 Optional cross-encoder rerank"]
-    N --> O["🤖 LLM answer generation"]
-```
-
-### Diagram option 2
-
-```mermaid
-flowchart LR
-    U["👤 User query"] --> I["🧠 Intent classifier"]
-    I --> R["🧭 Route request"]
-    R --> H["👨‍💼 Human handoff"]
-    R --> E["🚨 Escalation"]
-    R --> S["⚡ Urgent support"]
-    R --> G["🔎 Retrieval"]
-    G --> V["🗂️ Vector DB"]
-    G --> B["🔍 BM25"]
-    V --> F["⚖️ RRF fusion"]
-    B --> F
-    F --> C["🎯 Cross-encoder rerank"]
-    C --> L["🤖 LLM answer"]
-```
-
-### Diagram option 3
-
-```mermaid
-graph TB
-    A["👤 Query"] --> B["🧠 Intent classifier"]
-    B --> C["🧩 150+ intents + 6 meta-intents"]
-    C --> D["🧭 Routing decisions"]
-    D --> E["👨‍💼 Human support"]
-    D --> F["🚨 Escalation"]
-    D --> G["⚡ Urgent path"]
-    D --> H["🔎 Focused retrieval"]
-    H --> I["🗂️ Vector DB"]
-    H --> J["🔍 BM25"]
-    I --> K["⚖️ RRF fusion"]
-    J --> K
-    K --> L["🤖 LLM answer"]
-```
+### Intent Classifier architecture
+![Intent Classifier architecture](Final-RAG-Intent-classifier-dark.png)
 
 In practice, once the intent is classified, the retrieval step becomes smaller and more precise: the system can route to the right workflow, focus on the most relevant evidence and reduce the search area/scope dramatically.
 
