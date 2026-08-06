@@ -1,0 +1,107 @@
+<mxfile host="app.diagrams.net" modified="2026-08-06T00:00:00.000Z" agent="5.0" version="24.7.17">
+  <diagram id="rag-intent-flow" name="Page-1">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="2" value="User Query" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="220" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="3" value="Intent Classifier" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="240" y="220" width="140" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="4" value="150+ intents + 6 meta-intents" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="430" y="220" width="180" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="5" value="Routing Decisions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="660" y="220" width="140" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="6" value="Human support" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce7f3;strokeColor=#db2777;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="860" y="70" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="7" value="Escalation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce7f3;strokeColor=#db2777;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="860" y="140" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="8" value="Urgent path" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce7f3;strokeColor=#db2777;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="860" y="210" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="9" value="Focused retrieval" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1fae5;strokeColor=#059669;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="860" y="280" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="10" value="Vector DB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="220" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="11" value="BM25" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="300" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="12" value="RRF fusion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="260" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="13" value="LLM answer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#dc2626;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="260" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="14" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#6b7280;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="15" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#6b7280;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="16" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#6b7280;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="17" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#6b7280;" edge="1" parent="1" source="5" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="18" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#6b7280;" edge="1" parent="1" source="5" target="7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="19" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#6b7280;" edge="1" parent="1" source="5" target="8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="20" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#6b7280;" edge="1" parent="1" source="5" target="9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="21" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#6b7280;" edge="1" parent="1" source="9" target="10">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="22" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#6b7280;" edge="1" parent="1" source="9" target="11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="23" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#6b7280;" edge="1" parent="1" source="10" target="12">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="24" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#6b7280;" edge="1" parent="1" source="11" target="12">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="25" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#6b7280;" edge="1" parent="1" source="12" target="13">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

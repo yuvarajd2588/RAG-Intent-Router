@@ -14,6 +14,7 @@ This package helps you identify whether a user query is:
 - an escalation,
 - an urgent issue,
 - or negative sentiment that should not trigger normal search.
+- 150 default labels (The full mapping is stored in the bundled model asset at *rag_intent_classifier/models/label_map.joblib*)
 
 That makes retrieval more accurate and reduces unnecessary document search.
 
@@ -35,13 +36,14 @@ The current release surfaces these labels for routing-heavy RAG scenarios:
 - urgent_attention_required
 - general_customer_support
 
-These are especially useful for routing to a human, skipping standard retrieval, or narrowing search to the right support context.
+These are especially useful for routing to a human, skipping standard retrieval, when to send chat history, narrowing search to the right support context, etc.
 
 ## Architecture in a RAG pipeline
 
 The package acts as the first decision layer in a RAG system.
 
 ### Diagram option 1
+![RAG architecture](Final-RAG-Intent-classifier-dark.png)
 
 ```mermaid
 graph TD
@@ -98,7 +100,7 @@ graph TB
     K --> L["🤖 LLM answer"]
 ```
 
-In practice, once the intent is classified, the retrieval step becomes smaller and more precise: the system can route to the right workflow, focus on the most relevant evidence and reduce the search scope dramatically.
+In practice, once the intent is classified, the retrieval step becomes smaller and more precise: the system can route to the right workflow, focus on the most relevant evidence and reduce the search area/scope dramatically.
 
 ## Included capabilities
 
