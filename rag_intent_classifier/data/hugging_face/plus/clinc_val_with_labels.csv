@@ -3099,3 +3099,301 @@ what site publishes the most fake news,42,oos
 can you tell me some fake news,42,oos
 is cnn really fake news,42,oos
 why is there fake news,42,oos
+can you rewrite your last answer more clearly,200,follow_up
+your previous answer needs more explanation,200,follow_up
+can you simplify your last explanation,200,follow_up
+can you expand your last explanation,200,follow_up
+can you clarify your last explanation,200,follow_up
+can you summarize your previous explanation,200,follow_up
+can you shorten your previous explanation,200,follow_up
+can you lengthen your previous explanation,200,follow_up
+can you refine your previous explanation,200,follow_up
+can you fix your previous explanation,200,follow_up
+can you update your previous explanation,200,follow_up
+can you revisit your previous explanation,200,follow_up
+can you rethink your previous explanation,200,follow_up
+can you reconsider your previous explanation,200,follow_up
+can you check your previous explanation again,200,follow_up
+can you verify your previous explanation,200,follow_up
+can you double-check your previous explanation,200,follow_up
+can you add more context to your previous explanation,200,follow_up
+can you add more examples to your previous explanation,200,follow_up
+can you add more steps to your previous explanation,200,follow_up
+can you add more reasoning to your previous explanation,200,follow_up
+can you add more justification to your previous explanation,200,follow_up
+can you add more elaboration to your previous explanation,200,follow_up
+can you add more insight to your previous explanation,200,follow_up
+can you add more nuance to your previous explanation,200,follow_up
+can you add more precision to your previous explanation,200,follow_up
+can you add more depth to your previous explanation,200,follow_up
+can you add more simplicity to your previous explanation,200,follow_up
+can you add more complexity to your previous explanation,200,follow_up
+can you add more structure to your previous explanation,200,follow_up
+can you add more organization to your previous explanation,200,follow_up
+can you add more formatting to your previous explanation,200,follow_up
+can you add more polish to your previous explanation,200,follow_up
+can you add more refinement to your previous explanation,200,follow_up
+can you continue your previous explanation with more detail,200,follow_up
+can you continue your previous explanation with more clarity,200,follow_up
+can you continue your previous explanation with more examples,200,follow_up
+can you continue your previous explanation with more steps,200,follow_up
+can you continue your previous explanation with more reasoning,200,follow_up
+can you continue your previous explanation with more justification,200,follow_up
+can you continue your previous explanation with more elaboration,200,follow_up
+can you continue your previous explanation with more insight,200,follow_up
+can you continue your previous explanation with more nuance,200,follow_up
+can you continue your previous explanation with more precision,200,follow_up
+can you continue your previous explanation with more depth,200,follow_up
+can you continue your previous explanation with more simplicity,200,follow_up
+can you continue your previous explanation with more complexity,200,follow_up
+can you continue your previous explanation with more structure,200,follow_up
+can you continue your previous explanation with more organization,200,follow_up
+"i need to talk to a human about this",connect_to_human,201
+"please connect me to a real person who can help",connect_to_human,201
+"can you get a human on this chat",connect_to_human,201
+"i want to speak with a human representative",connect_to_human,201
+"transfer me to a human agent please",connect_to_human,201
+"i don't want to talk to a bot, connect me to a human",connect_to_human,201
+"let me talk to someone real",connect_to_human,201
+"i need human assistance right now",connect_to_human,201
+"please switch me to a human agent",connect_to_human,201
+"i want a human to help me understand this",connect_to_human,201
+"can you bring a human into this conversation",connect_to_human,201
+"i need a human to explain this to me",connect_to_human,201
+"connect me to a human who can assist",connect_to_human,201
+"i want to talk to a human instead of this bot",connect_to_human,201
+"please hand this off to a human",connect_to_human,201
+"i need a real person to help me",connect_to_human,201
+"can you get a human to respond",connect_to_human,201
+"i want to speak with a human right away",connect_to_human,201
+"please connect me to a human helper",connect_to_human,201
+"i need human support asap",connect_to_human,201
+"connect me to a human who can fix this",connect_to_human,201
+"i want to talk to a human who understands this",connect_to_human,201
+"please get a human to join this chat",connect_to_human,201
+"i need a human to help me with my account",connect_to_human,201
+"can you bring a human into this chat asap",connect_to_human,201
+"i want to speak with a human who can guide me",connect_to_human,201
+"please transfer me to a human representative",connect_to_human,201
+"i need a human to help me solve this",connect_to_human,201
+"connect me to a human who can explain what's going on",connect_to_human,201
+"i want to talk to a human who can assist immediately",connect_to_human,201
+"please get a human to help me right now",connect_to_human,201
+"i need human assistance to continue",connect_to_human,201
+"can you get a human to talk to me right now",connect_to_human,201
+"i want to speak with a human who can resolve this",connect_to_human,201
+"please connect me to a human expert",connect_to_human,201
+"i need a human to help me understand this issue",connect_to_human,201
+"connect me to a human who can help immediately",connect_to_human,201
+"i want to talk to a human who can fix this problem",connect_to_human,201
+"please get a human to assist me asap",connect_to_human,201
+"i need a human to help me right away",connect_to_human,201
+"can you bring a human into this conversation asap",connect_to_human,201
+"i want to speak with a human who can help me now",connect_to_human,201
+"please transfer me to a human who knows what to do",connect_to_human,201
+"i need human guidance to proceed",connect_to_human,201
+"connect me to a human who can answer my questions",connect_to_human,201
+"i want to talk to a human about this issue",connect_to_human,201
+"please get a human to join the conversation",connect_to_human,201
+"i need a human to help me understand this better",connect_to_human,201
+"can you get a human to respond to me asap",connect_to_human,201
+"i want to talk to a human who can resolve this quickly",connect_to_human,201
+"please escalate this issue to someone senior",escalate_issue,202
+"i'm not satisfied, escalate this now",escalate_issue,202
+"can you escalate this to your supervisor",escalate_issue,202
+"i want this escalated immediately",escalate_issue,202
+"escalate this because i'm not getting help",escalate_issue,202
+"please escalate my complaint",escalate_issue,202
+"i need escalation support right away",escalate_issue,202
+"escalate this to someone who can fix it",escalate_issue,202
+"i want a manager to review this",escalate_issue,202
+"please escalate this matter asap",escalate_issue,202
+"i'm tired of repeating myself, escalate this",escalate_issue,202
+"escalate this to the next support level",escalate_issue,202
+"i need this escalated to someone experienced",escalate_issue,202
+"please escalate this because it's unresolved",escalate_issue,202
+"i want escalation because i'm unhappy",escalate_issue,202
+"escalate this to someone with authority",escalate_issue,202
+"i need escalation because this is urgent",escalate_issue,202
+"please escalate this to your senior team",escalate_issue,202
+"i want escalation because i'm not getting answers",escalate_issue,202
+"escalate this to someone who can act fast",escalate_issue,202
+"i need escalation because i'm frustrated",escalate_issue,202
+"please escalate this to someone who can resolve it",escalate_issue,202
+"i want escalation because this issue is still open",escalate_issue,202
+"escalate this to someone who can handle urgent matters",escalate_issue,202
+"i need escalation because i'm not getting clear guidance",escalate_issue,202
+"please escalate this to someone who can fix it now",escalate_issue,202
+"i want escalation because i'm not getting proper help",escalate_issue,202
+"escalate this to someone who can take responsibility",escalate_issue,202
+"i need escalation because this is beyond basic troubleshooting",escalate_issue,202
+"please escalate this to someone who can act immediately",escalate_issue,202
+"i want escalation because i'm not getting the right answers",escalate_issue,202
+"escalate this to someone who can handle this properly",escalate_issue,202
+"i need escalation because this is urgent and unresolved",escalate_issue,202
+"please escalate this to someone who can resolve it fast",escalate_issue,202
+"i want escalation because i'm unhappy with the bot's response",escalate_issue,202
+"escalate this to someone who can take immediate action",escalate_issue,202
+"i need escalation because i'm not getting a solution",escalate_issue,202
+"please escalate this to someone who can help right away",escalate_issue,202
+"i want escalation because i'm tired of repeating myself",escalate_issue,202
+"escalate this to someone who can handle escalated cases",escalate_issue,202
+"i need escalation because i'm not getting any progress",escalate_issue,202
+"please escalate this to someone who can fix it immediately",escalate_issue,202
+"i want escalation because this issue is still unresolved",escalate_issue,202
+"escalate this to someone who can handle escalations",escalate_issue,202
+"i need escalation because i'm not getting clear answers",escalate_issue,202
+"please escalate this to someone who can solve it immediately",escalate_issue,202
+"i want escalation because i'm frustrated with the lack of help",escalate_issue,202
+"escalate this to someone who can take control",escalate_issue,202
+"i need escalation because this is beyond the bot's capability",escalate_issue,202
+"please escalate this to someone who can fix it quickly",escalate_issue,202
+"i'm really frustrated with how bad this is",negative_sentiment,203
+"this bot isn't helping me at all and i'm annoyed",negative_sentiment,203
+"i'm upset because nothing is working properly",negative_sentiment,203
+"this is so disappointing, i'm not happy",negative_sentiment,203
+"i'm irritated because this keeps failing",negative_sentiment,203
+"this bot is making things worse for me",negative_sentiment,203
+"i'm angry because this is taking too long",negative_sentiment,203
+"this is not helpful, i'm frustrated",negative_sentiment,203
+"i'm annoyed because i'm not getting answers",negative_sentiment,203
+"this bot keeps misunderstanding me and i'm upset",negative_sentiment,203
+"i'm frustrated because this is too slow",negative_sentiment,203
+"this is terrible support, i'm unhappy",negative_sentiment,203
+"i'm irritated because this keeps crashing",negative_sentiment,203
+"this bot is useless, i'm annoyed",negative_sentiment,203
+"i'm upset because this is confusing",negative_sentiment,203
+"this is not working and i'm angry",negative_sentiment,203
+"i'm frustrated because i'm stuck again",negative_sentiment,203
+"this bot keeps giving me wrong info",negative_sentiment,203
+"i'm annoyed because this is too complicated",negative_sentiment,203
+"this is so frustrating, i'm done",negative_sentiment,203
+"i'm angry because this isn't fixed",negative_sentiment,203
+"this bot is making me upset",negative_sentiment,203
+"i'm irritated because nothing is improving",negative_sentiment,203
+"this is not helpful at all, i'm upset",negative_sentiment,203
+"i'm frustrated because i'm not getting help",negative_sentiment,203
+"this bot keeps failing and i'm annoyed",negative_sentiment,203
+"i'm angry because this keeps happening",negative_sentiment,203
+"this is so disappointing, i'm irritated",negative_sentiment,203
+"i'm upset because this is too slow",negative_sentiment,203
+"this bot keeps messing up and i'm frustrated",negative_sentiment,203
+"i'm irritated because this isn't loading",negative_sentiment,203
+"this is not working, i'm upset again",negative_sentiment,203
+"i'm frustrated because this is broken again",negative_sentiment,203
+"this bot is giving me errors and i'm annoyed",negative_sentiment,203
+"i'm angry because this is still not fixed",negative_sentiment,203
+"this is not helpful, i'm irritated again",negative_sentiment,203
+"i'm upset because i'm not getting support",negative_sentiment,203
+"this bot keeps crashing and i'm frustrated",negative_sentiment,203
+"i'm irritated because this is too slow again",negative_sentiment,203
+"this is so annoying, i'm upset again",negative_sentiment,203
+"i'm frustrated because i'm stuck once more",negative_sentiment,203
+"this bot keeps misunderstanding me again",negative_sentiment,203
+"i'm angry because this is still broken",negative_sentiment,203
+"this is not working, i'm annoyed again",negative_sentiment,203
+"i'm upset because this is still not working",negative_sentiment,203
+"this bot keeps giving me bad answers",negative_sentiment,203
+"i'm frustrated because this is still confusing",negative_sentiment,203
+"this is not helpful, i'm upset once more",negative_sentiment,203
+"i'm angry because this is still not improving",negative_sentiment,203
+"this bot is giving me trouble again",negative_sentiment,203
+"my account is locked and i need urgent help",urgent_attention_required,204
+"urgent help, my card was stolen today",urgent_attention_required,204
+"i need immediate assistance, unauthorized charges detected",urgent_attention_required,204
+"urgent issue, my account is showing suspicious activity",urgent_attention_required,204
+"my card isn't working and i need help asap",urgent_attention_required,204
+"urgent attention required, my account was accessed without permission",urgent_attention_required,204
+"i need emergency help, my account is frozen",urgent_attention_required,204
+"urgent help needed, my card was used fraudulently",urgent_attention_required,204
+"my account is compromised, please assist immediately",urgent_attention_required,204
+"urgent issue, my login isn't working",urgent_attention_required,204
+"i need immediate help, my card is missing",urgent_attention_required,204
+"urgent attention required, unauthorized login attempt detected",urgent_attention_required,204
+"my account is inaccessible and i need urgent support",urgent_attention_required,204
+"urgent help, my card was charged incorrectly",urgent_attention_required,204
+"i need emergency assistance, my account is hacked",urgent_attention_required,204
+"urgent issue, my card was used without authorization",urgent_attention_required,204
+"my account is frozen again, urgent help needed",urgent_attention_required,204
+"urgent attention required, suspicious charges appeared",urgent_attention_required,204
+"i need immediate help, my card is blocked",urgent_attention_required,204
+"urgent help needed, unauthorized access detected",urgent_attention_required,204
+"my account is compromised again, urgent support",urgent_attention_required,204
+"urgent issue, my card isn't working again",urgent_attention_required,204
+"i need emergency help, unauthorized charges detected again",urgent_attention_required,204
+"urgent attention required, my login failed again",urgent_attention_required,204
+"my account is inaccessible again, urgent help",urgent_attention_required,204
+"urgent help needed, suspicious login detected again",urgent_attention_required,204
+"i need immediate assistance, my card was stolen again",urgent_attention_required,204
+"urgent issue, unauthorized activity detected again",urgent_attention_required,204
+"my account is frozen once more, urgent support",urgent_attention_required,204
+"urgent attention required, unauthorized charges detected once more",urgent_attention_required,204
+"i need emergency help, my card isn't working once more",urgent_attention_required,204
+"urgent help needed, suspicious activity detected once more",urgent_attention_required,204
+"my account is compromised once more, urgent help",urgent_attention_required,204
+"urgent issue, unauthorized login detected once more",urgent_attention_required,204
+"i need immediate help, my card is blocked once more",urgent_attention_required,204
+"urgent attention required, unauthorized access detected once more",urgent_attention_required,204
+"my card isn't working again and i need urgent help",urgent_attention_required,204
+"urgent issue, suspicious charges detected again",urgent_attention_required,204
+"i need emergency assistance, my account is inaccessible again",urgent_attention_required,204
+"urgent help needed, unauthorized login attempts detected",urgent_attention_required,204
+"my account is compromised repeatedly, urgent help",urgent_attention_required,204
+"urgent attention required, unauthorized activity detected repeatedly",urgent_attention_required,204
+"i need immediate help, my card is blocked repeatedly",urgent_attention_required,204
+"urgent help needed, suspicious charges detected repeatedly",urgent_attention_required,204
+"my account is frozen repeatedly, urgent assistance",urgent_attention_required,204
+"urgent issue, unauthorized access detected repeatedly",urgent_attention_required,204
+"i need emergency support, my card was stolen repeatedly",urgent_attention_required,204
+"urgent attention required, suspicious login detected repeatedly",urgent_attention_required,204
+"my card isn't working repeatedly, urgent help",urgent_attention_required,204
+"how do i update my account information",general_customer_support,205
+"i need help understanding my billing details",general_customer_support,205
+"where can i find my account settings",general_customer_support,205
+"how do i change my password",general_customer_support,205
+"i need assistance with my profile settings",general_customer_support,205
+"how do i check my account balance",general_customer_support,205
+"where can i see my recent activity",general_customer_support,205
+"i need help updating my email address",general_customer_support,205
+"how do i manage my payment methods",general_customer_support,205
+"where can i find my subscription details",general_customer_support,205
+"i need help understanding my service plan",general_customer_support,205
+"how do i update my phone number",general_customer_support,205
+"where can i find my billing history",general_customer_support,205
+"i need assistance with my account notifications",general_customer_support,205
+"how do i check my membership status",general_customer_support,205
+"where can i find my saved items",general_customer_support,205
+"i need help navigating my dashboard",general_customer_support,205
+"how do i update my mailing address",general_customer_support,205
+"where can i find my account preferences",general_customer_support,205
+"i need help understanding my service usage",general_customer_support,205
+"how do i manage my security settings",general_customer_support,205
+"where can i find my account overview",general_customer_support,205
+"i need assistance with my account tools",general_customer_support,205
+"how do i check my rewards points",general_customer_support,205
+"where can i find my linked devices",general_customer_support,205
+"i need help reviewing my account details",general_customer_support,205
+"how do i update my profile picture",general_customer_support,205
+"where can i find my account summary",general_customer_support,205
+"i need help understanding my plan benefits",general_customer_support,205
+"how do i manage my communication preferences",general_customer_support,205
+"where can i find my saved payment methods",general_customer_support,205
+"i need assistance with my account verification",general_customer_support,205
+"how do i check my service status",general_customer_support,205
+"where can i find my account documents",general_customer_support,205
+"i need help understanding my service fees",general_customer_support,205
+"how do i update my communication settings",general_customer_support,205
+"where can i find my profile options",general_customer_support,205
+"i need help with my account customization",general_customer_support,205
+"how do i manage my subscription settings",general_customer_support,205
+"where can i find my account activity log",general_customer_support,205
+"i need help understanding my dashboard layout",general_customer_support,205
+"how do i update my account security",general_customer_support,205
+"where can i find my account tools",general_customer_support,205
+"i need help with my account organization",general_customer_support,205
+"how do i manage my account permissions",general_customer_support,205
+"where can i find my account resources",general_customer_support,205
+"i need help understanding my account options",general_customer_support,205
+"how do i update my account preferences",general_customer_support,205
+"where can i find my account settings page",general_customer_support,205
+"i need help with my account management",general_customer_support,205
