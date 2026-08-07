@@ -1,2 +1,3 @@
+include README.md
 include rag_intent_classifier/docs/*.md
 include rag_intent_classifier/models/*.joblib
