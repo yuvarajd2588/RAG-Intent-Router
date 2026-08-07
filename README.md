@@ -43,7 +43,7 @@ These are especially useful for routing to a human, skipping standard retrieval,
 The package acts as the first decision layer in a RAG system.
 
 ### Intent Classifier architecture
-![Intent Classifier architecture](Final-RAG-Intent-classifier-dark.png)
+![Intent Classifier architecture](Final-RAG-Intent-classifier1.png)
 
 In practice, once the intent is classified, the retrieval step becomes smaller and more precise: the system can route to the right workflow, focus on the most relevant evidence and reduce the search area/scope dramatically.
 
