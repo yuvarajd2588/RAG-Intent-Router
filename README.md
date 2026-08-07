@@ -49,6 +49,8 @@ These are especially useful for routing to a human, skipping standard retrieval,
 
 This model is trained on a total of 17k+ labelled rows, with 3.8k+ validation rows and 5.7k+ test rows to support reliable intent routing.
 
+> Note: This classifier is built on general-purpose intent data and is intended as a strong starting point. For production use in a specific domain such as insurance, banking, sports, HR, consulting, or customer support, it is recommended to fine-tune or retrain the model on domain-specific examples for better accuracy and more relevant routing.
+
 ## Architecture in a RAG pipeline
 
 The package acts as the first decision layer in a RAG system.
