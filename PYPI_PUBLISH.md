@@ -52,12 +52,18 @@ If you prefer to provide them explicitly in the command line:
 
 ```bash
 twine upload --repository pypi dist/*
+
+Test: twine upload --repository testpypi dist/*
 ```
 
 ## 7. Verify the published package
 
 ```bash
-pip install --upgrade rag-intent-classifier
+pip install --upgrade rag_intent_classifier
+
+test: pip install --index-url https://test.pypi.org/simple/ \
+            --extra-index-url https://pypi.org/simple \
+            rag_intent_classifier
 ```
 
 ## Notes
