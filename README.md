@@ -54,7 +54,7 @@ This model is trained on a total of 17k+ labelled rows, with 3.8k+ validation ro
 The package acts as the first decision layer in a RAG system.
 
 ### Intent Classifier architecture
-![Architecture Diagram](https://raw.githubusercontent.com/yuvarajd2588/RAG-Intent-Router/trained-router/Final-rag_intent_classifier.png)
+![Architecture Diagram](https://raw.githubusercontent.com/yuvarajd2588/rag_Intent_classifier/main/Intent_classifier_arch.png)
 
 In practice, once the intent is classified, the retrieval step becomes smaller and more precise: the system can route to the right workflow, focus on the most relevant evidence and reduce the search area/scope dramatically. 
 
