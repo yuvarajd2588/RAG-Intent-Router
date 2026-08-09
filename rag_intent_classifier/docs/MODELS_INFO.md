@@ -42,5 +42,8 @@ All models are trained using:
 ```python
 from rag_intent_classifier import infer_intent
 
-infer_intent("How do I renew my policy?")
-infer_intent("How do I renew my policy?", model="LinearSVC")
+print(infer_intent("How do I renew my policy?"))
+print(infer_intent("How do I renew my policy?", model="LinearSVC"))
+```
+
+Each result contains an `intent`, a `confidence` score when available, and a `reason` string. If your application uses a confidence threshold, a typical starting point is `0.60` to `0.85` before falling back to an LLM or custom logic. A threshold around `0.60` is a practical default for many routing workflows, while more conservative systems may prefer `0.70` or higher.

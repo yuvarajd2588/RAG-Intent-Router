@@ -141,6 +141,9 @@ def infer_intent(text, model="LogisticRegression"):
     """
     Predict intent using the specified model.
     Default model = LogisticRegression.
+
+    Returns a list of dictionaries containing the predicted intent, a
+    confidence score when available, and a simple reason string.
     """
 
     encoder, label_map = _load_assets()
@@ -157,9 +160,27 @@ def infer_intent(text, model="LogisticRegression"):
 
     embeddings = encoder.encode(texts, show_progress_bar=False)
     numeric_preds = clf.predict(embeddings)
-    human_preds = [_resolve_label_name(prediction, label_map) for prediction in numeric_preds]
 
-    return human_preds
+    results = []
+    if hasattr(clf, "predict_proba"):
+        probabilities = clf.predict_proba(embeddings)
+        for prediction, probs in zip(numeric_preds, probabilities):
+            pred_index = list(clf.classes_).index(str(prediction))
+            confidence = float(probs[pred_index])
+            results.append({
+                "intent": _resolve_label_name(prediction, label_map),
+                "confidence": confidence,
+                "reason": "predicted by classifier with probability-based score",
+            })
+    else:
+        for prediction in numeric_preds:
+            results.append({
+                "intent": _resolve_label_name(prediction, label_map),
+                "confidence": None,
+                "reason": "probability scores are not available for this classifier",
+            })
+
+    return results
 
 
 def list_available_models():

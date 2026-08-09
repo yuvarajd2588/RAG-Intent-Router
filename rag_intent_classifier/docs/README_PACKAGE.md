@@ -37,8 +37,16 @@ pip install rag_intent_classifier
 ```python
 from rag_intent_classifier import infer_intent
 
-print(infer_intent("How do I renew my policy?"))
+result = infer_intent("How do I renew my policy?")
+print(result)
 ```
+
+Example output:
+```python
+[{"intent": "general_customer_support", "confidence": 0.91, "reason": "predicted by classifier with probability-based score"}]
+```
+
+Use a confidence threshold such as 0.60 to 0.85 to decide when to fall back to an LLM, human handoff, or custom business logic. A threshold around 0.60 is a practical default for many routing workflows, while more conservative systems may prefer 0.70 or higher.
 
 ## RAG placement
 
@@ -57,3 +65,23 @@ flowchart TD
 ```
 
 This helps shrink the search space and route the request to the right handling path before the main retrieval step.
+
+## Sample inputs and outputs
+
+Here are a few example predictions the model can return:
+
+```python
+from rag_intent_classifier import infer_intent
+
+print(infer_intent("Can you connect me to a human?"))
+print(infer_intent("Can you follow up on my previous request?"))
+print(infer_intent("I'm extremely unhappy with this service."))
+```
+
+Example output:
+
+```python
+[{'intent': 'connect_to_human', 'confidence': 0.95, 'reason': 'predicted by classifier with probability-based score'}]
+[{'intent': 'follow_up', 'confidence': 0.91, 'reason': 'predicted by classifier with probability-based score'}]
+[{'intent': 'negative_sentiment', 'confidence': 0.97, 'reason': 'predicted by classifier with probability-based score'}]
+```
