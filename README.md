@@ -22,6 +22,7 @@ That makes retrieval more accurate and reduces unnecessary document search.
 
 - Classifies intents using MiniLM embeddings and packaged classical ML models
 - Returns human-readable labels for downstream routing
+- Returns a confidence score for each prediction so you can decide when to route safely or fall back to an LLM or custom logic
 - Works offline with no external API dependency
 - Supports a simple Python API and CLI
 
@@ -73,6 +74,9 @@ In practice, once the intent is classified, the retrieval step becomes smaller a
 
 Python 3.9 to 3.12 is the currently supported range for this package. This release uses a pinned dependency stack for reproducible installs and model compatibility. Python 3.13 is not currently targeted for this release.
 
+If you try to install on Python 3.13 or newer, pip will now consider the package installable because the metadata declares `requires-python = ">=3.9,<3.14"`.
+That means the package is now advertised as installable for Python 3.13+, although runtime compatibility should still be validated in your target environment.
+
 ```bash
 pip install rag_intent_classifier
 ```
@@ -82,13 +86,44 @@ pip install rag_intent_classifier
 ```python
 from rag_intent_classifier import infer_intent
 
-print(infer_intent("How do I renew my policy?"))
+result = infer_intent("How do I renew my policy?")
+print(result)
 ```
+
+Each result contains:
+- `intent`: the predicted label
+- `confidence`: a score between 0 and 1 when available
+- `reason`: a short explanation of how the result was produced
+
+For routing logic, a practical starting point is to use a confidence threshold such as `0.60` to `0.85`.
+If the score is below your threshold, you can safely fall back to an LLM, a human handoff, or a custom rule-based fallback.
+A threshold around `0.60` is a reasonable default for many support or routing workflows, while more conservative systems may prefer `0.70` or higher.
+The exact threshold depends on your domain risk tolerance and should be tuned on your own validation data.
 
 ## CLI usage
 
 ```bash
 rag_intent_classifier "How do I renew my policy?"
+```
+
+## Sample inputs and outputs
+
+Here are a few example predictions the model can return:
+
+```python
+from rag_intent_classifier import infer_intent
+
+print(infer_intent("Can you connect me to a human?"))
+print(infer_intent("Can you follow up on my previous request?"))
+print(infer_intent("I'm extremely unhappy with this service."))
+```
+
+Example output:
+
+```python
+[{'intent': 'connect_to_human', 'confidence': 0.95, 'reason': 'predicted by classifier with probability-based score'}]
+[{'intent': 'follow_up', 'confidence': 0.91, 'reason': 'predicted by classifier with probability-based score'}]
+[{'intent': 'negative_sentiment', 'confidence': 0.97, 'reason': 'predicted by classifier with probability-based score'}]
 ```
 
 ## Development install
